@@ -1,0 +1,30 @@
+﻿
+VERSION 0.0.1 - MVVM Structure, Core Logic for Adding Test Contacts to the UI
+
+Structure and Project Setup
+-Created the standard MVVM folder structure.
+-Added a Changelog folder to document updates.
+-Recreated the project from scratch using Visual Studio Code to ensure proper compatibility with Avalonia tools.
+-Installed the Avalonia extension for Visual Studio Code to improve .axaml editing (autocomplete and formatting now work correctly).
+
+Models
+-Created the Contact class in the Models folder.
+-Added basic properties (Name, Email, PhoneNumber) and implemented the INotifyPropertyChanged interface to enable UI updates when properties change.
+
+-ViewModels
+Created MainWindowViewModel.cs in the ViewModels folder.
+-Added an ObservableCollection<Contact> to hold the list of contacts.
+-Configured the DataContext to bind the ViewModel to the View.
+
+Views
+-Added a StackPanel to MainWindow.axaml to display the contact list.
+-Each Contact is shown using read-only TextBox elements, with appropriate margins for layout.
+
+Helpers
+-Created a RelayCommand class in the Helper folder that implements the ICommand interface.
+-This command allows reusable bindings between buttons and logic while preserving separation of concerns.
+-Although the CommunityToolkit’s RelayCommand was available, a custom implementation was chosen for learning purposes.
+
+Features
+-Installed the MessageBox.Avalonia library to display modal dialogs.
+-Added a button to MainWindow.axaml bound to the AddContactCommand, which currently adds a test contact (custom creation logic is planned for future versions).
