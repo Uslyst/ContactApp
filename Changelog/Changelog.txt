@@ -28,3 +28,17 @@ Helpers
 Features
 -Installed the MessageBox.Avalonia library to display modal dialogs.
 -Added a button to MainWindow.axaml bound to the AddContactCommand, which currently adds a test contact (custom creation logic is planned for future versions).
+
+VERSION 0.0.2 - Custom Contact Addition & Design Improvements
+
+Added input fields for Name, Email, and Phone using TextBoxes.
+
+Created NewName, NewEmail, and NewPhone properties in the ViewModel with INotifyPropertyChanged.
+
+Updated AddContactCommand to create a new contact using the input fields and clear them after adding.
+
+Reorganized layout using Grid with three rows: title, contact list, and input form.
+
+Added a Label as a title above the contact list.
+
+Set a fixed width to the main StackPanel to keep layout stable on window resize.
